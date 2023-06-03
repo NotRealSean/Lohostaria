@@ -56,7 +56,7 @@ namespace lohostaria
         public async Task MainAsync()
         {
             // Tokens should be considered secret data, and never hard-coded.
-            string token = File.ReadAllText("token.json");
+            string token = File.ReadAllText("token.txt");
             await _client.LoginAsync(TokenType.Bot, token);
             // Different approaches to making your token a secret is by putting them in local .json, .yaml, .xml or .txt files, then reading them on startup.
 
