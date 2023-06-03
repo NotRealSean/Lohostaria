@@ -84,7 +84,7 @@ namespace lohostaria
             }
             if (message.Content == prefix + "project-detail")
             {
-                await message.Channel.SendMessageAsync("This project is my hobby project of creating a bot");
+                await message.Channel.SendMessageAsync("This project is NotRealSean's hobby project of creating his own bot");
             }
         }
         private async Task InteractionCreatedAsync(SocketInteraction interaction)
