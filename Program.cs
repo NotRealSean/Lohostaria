@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.WebSocket;
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -55,7 +56,8 @@ namespace lohostaria
         public async Task MainAsync()
         {
             // Tokens should be considered secret data, and never hard-coded.
-            await _client.LoginAsync(TokenType.Bot, "");
+            string token = File.ReadAllText("token.js");
+            await _client.LoginAsync(TokenType.Bot, token);
             // Different approaches to making your token a secret is by putting them in local .json, .yaml, .xml or .txt files, then reading them on startup.
 
             await _client.StartAsync();
