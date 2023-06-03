@@ -113,9 +113,14 @@ namespace lohostaria
                 Game(message);
             }
 
+
             if (message.Content == prefix + "help")
             {
                 await message.Channel.SendMessageAsync("I'm sorry I'm currently in development");
+            }
+            if (message.Content == prefix + "whoami")
+            {
+                await message.Channel.SendMessageAsync((message.Author).ToString());
             }
         }
 
