@@ -74,20 +74,6 @@ namespace lohostaria
 
 
 
-
-            if (message.Content == prefix + "start")
-            {
-                await message.Channel.SendMessageAsync("This game recommend to have only 1 channel per player(if you  want to process type \"y\")");
-                if (message.Content == prefix + "y")
-                {
-                    Game(message);
-                }
-                else
-                    await message.Channel.SendMessageAsync("Game rejected to start");
-            }
-
-
-
             if (message.Content == prefix + "help")
             {
                 await message.Channel.SendMessageAsync("I'm sorry I'm currently in development");
@@ -98,7 +84,7 @@ namespace lohostaria
             }
             if (message.Content == prefix + "project-detail")
             {
-                await message.Channel.SendMessageAsync("This project is my hobby project of creating a text-base discord bot game");
+                await message.Channel.SendMessageAsync("This project is my hobby project of creating a bot");
             }
         }
         private async Task InteractionCreatedAsync(SocketInteraction interaction)
@@ -115,10 +101,6 @@ namespace lohostaria
                     Console.WriteLine("An ID has been received that has no handler!");
             }
             */
-        }
-        private async Task Game(SocketMessage message)
-        {
-            await message.Channel.SendMessageAsync("I'm sorry I'm currently in development");
         }
     }
 }
